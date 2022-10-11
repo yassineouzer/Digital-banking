@@ -1,0 +1,30 @@
+<div class="container">
+   
+    <nav class="p-2 m-2">
+        <button class="btn btn btn-outline-info"></button>
+    </nav>
+    <div class="card">
+        <div class="card-header">List of customers
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>id</th> <th>name</th>  <th>email</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr *ngFor="let c of customers">
+                                <td>{{ c.id}}</td>
+                                <td>{{ c.name}}</td>
+                                <td>{{ c.email}}</td>
+                                <td><button class="btn btn-danger">
+                                 Delete
+                                </button></td>
+                            </tr>
+                        </tbody>
+               
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
