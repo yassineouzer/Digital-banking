@@ -1,17 +1,29 @@
 {
- 
-
-  "customers":[
-    { "id": 1,
+  "customers": [
+    {
+      "id": 1,
       "name": "Ouzeren",
-      "email":"ouzereny@gmail.com"
+      "email": "ouzereny@gmail.com"
     },
-
-    { "id": 2,
+    {
+      "id": 2,
       "name": "hamza",
-      "email":"hamza@gmail.com"
+      "email": "hamza@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "yassine",
+      "email": "yassine@outlook.com"
+    },
+    {
+      "id": 4,
+      "name": "youssef",
+      "email": "youssef@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "yazid",
+      "email": "yazid@gmail.com"
     }
-  
-  
   ]
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,Validators, ValidationErrors } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
+import { CustomerService } from '../services/customer.service';
 
 @Component({
   selector: 'app-new-customer',
@@ -9,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class NewCustomerComponent implements OnInit {
   CustomeformGroup! :FormGroup;
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private customerservice:CustomerService) { }
 
   ngOnInit(): void {
     this.CustomeformGroup=this.fb.group(
@@ -24,6 +25,11 @@ export class NewCustomerComponent implements OnInit {
 
   HandleSaveCustomer(){
 
+ this.customerservice.AddCustomer(this.CustomeformGroup.value).subscribe({
+   next:(data=>{
+      alert("customer added succesful");
+   })
+ })
   }
 
 }

@@ -8,6 +8,8 @@ import { Customer } from '../model/customer';
   providedIn: 'root'
 })
 export class CustomerService {
+ 
+  url="http://localhost:5000/customers";
 
   private customers!:Array<Customer>;
   constructor(private http:HttpClient) { 
@@ -16,8 +18,18 @@ export class CustomerService {
 
   public getCustomers():Observable<Array<Customer>>{
                 
-  return this.http.get<Array<Customer>>("http://localhost:5000/customers");
+  return this.http.get<Array<Customer>>(this.url);
     
 
+  }
+  public AddCustomer(cu:Customer){
+    return this.http.post(this.url,cu);
+
+
+  }
+
+  deleteCustomer(id:number){
+   
+  
   }
 }
