@@ -8,17 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CustomersComponent implements OnInit {
    
- customers!:any;
+customers! : Array<any>;
   constructor(private http:HttpClient) { }
-
+ 
   ngOnInit(): void {
-     this.http.get("src/app/database.json").subscribe(
-       da=>{
+    ;
+     this.http.get("http://localhost:5000/customers").subscribe({
+       next :(da:any)=>{
          this.customers=da;
-         console.log(da);
-       }
-       )
+        
+       
+        },
       }
+       )}
+      
      
      
-}
+    }
