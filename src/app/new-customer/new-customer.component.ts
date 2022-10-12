@@ -15,9 +15,9 @@ export class NewCustomerComponent implements OnInit {
   ngOnInit(): void {
     this.CustomeformGroup=this.fb.group(
       {
-        id:this.fb.control(null),
-        name: this.fb.control(null),
-        email:this.fb.control(null)
+        id:this.fb.control(null,),
+        name: this.fb.control(null,[Validators.required,Validators.minLength(5)]),
+        email:this.fb.control(null,[Validators.email,Validators.required])
       }
     )
 

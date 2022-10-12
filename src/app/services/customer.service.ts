@@ -22,13 +22,14 @@ export class CustomerService {
     
 
   }
-  public AddCustomer(cu:Customer){
-    return this.http.post(this.url,cu);
+  public AddCustomer(cu:Customer):Observable<Customer>{
+    return this.http.post<Customer>(this.url,cu);
 
 
   }
 
   deleteCustomer(id:number){
+    return this.http.delete(this.url+id);
    
   
   }

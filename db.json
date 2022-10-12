@@ -24,6 +24,16 @@
       "id": 5,
       "name": "yazid",
       "email": "yazid@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "karim",
+      "email": "karim@gmail.com"
+    },
+    {
+      "id": 7,
+      "name": "yassmine",
+      "email": "yassmine@gmail.com"
     }
   ]
 }

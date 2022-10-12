@@ -22,6 +22,14 @@ customers! : Array<Customer>;
     })
   }
 
+  HandleDeleteCustomer(c:Customer){
+    this.customerservice.deleteCustomer(c.id).subscribe({
+      next:(resp)=>{
+   
+      }
+    })
+  }
+
 
 
 }
