@@ -3,12 +3,12 @@
 
   "customers":[
     { "id": 1,
-      "nom": "Ouzeren",
+      "name": "Ouzeren",
       "email":"ouzereny@gmail.com"
     },
 
     { "id": 2,
-      "nom": "hamza",
+      "name": "hamza",
       "email":"hamza@gmail.com"
     }
   
