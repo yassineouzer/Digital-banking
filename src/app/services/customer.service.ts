@@ -9,7 +9,7 @@ import { Customer } from '../model/customer';
 })
 export class CustomerService {
  
-  url="http://localhost:5000/customers";
+  url="http://localhost:5000";
 
   private customers!:Array<Customer>;
   constructor(private http:HttpClient) { 
@@ -18,19 +18,32 @@ export class CustomerService {
 
   public getCustomers():Observable<Array<Customer>>{
                 
-  return this.http.get<Array<Customer>>(this.url);
+  return this.http.get<Array<Customer>>(this.url+"/customers");
     
 
   }
   public AddCustomer(cu:Customer):Observable<Customer>{
-    return this.http.post<Customer>(this.url,cu);
+    return this.http.post<Customer>(this.url+"/customers",cu);
 
 
   }
 
-  deleteCustomer(id:number){
-    return this.http.delete(this.url+id);
-   
-  
+  HandleSearch(){
+    return this.http.get(this.url+"/customers")
   }
+
+ public SearchCustome(Keyword:string):Observable<Array<Customer>>{
+               
+  return this.http.get<Array<Customer>>(this.url+"/customers?name="+Keyword);
+    
+
+  }
+
+public DeleteCustomer(id:number):Observable<Customer>{
+ return this.http.delete<Customer>(this.url+"/customers/"+id);
+}
+
+
+ 
+
 }

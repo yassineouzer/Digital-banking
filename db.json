@@ -1,39 +1,9 @@
 {
   "customers": [
     {
-      "id": 1,
-      "name": "Ouzeren",
-      "email": "ouzereny@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "hamza",
-      "email": "hamza@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "yassine",
-      "email": "yassine@outlook.com"
-    },
-    {
-      "id": 4,
-      "name": "youssef",
-      "email": "youssef@gmail.com"
-    },
-    {
-      "id": 5,
-      "name": "yazid",
-      "email": "yazid@gmail.com"
-    },
-    {
       "id": 6,
-      "name": "karim",
-      "email": "karim@gmail.com"
-    },
-    {
-      "id": 7,
-      "name": "yassmine",
-      "email": "yassmine@gmail.com"
+      "name": "yassine",
+      "email": "yassine@gmail.com"
     }
   ]
 }
