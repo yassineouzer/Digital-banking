@@ -24,6 +24,7 @@ custfiltre!: Array<Customer>;
   constructor(private customerservice:CustomerService,private http:HttpClient,private fb:FormBuilder) { }
  
   ngOnInit(): void {
+    this.Handle();
 
     this.SearchformGroup=this.fb.group(
       {
@@ -33,7 +34,7 @@ custfiltre!: Array<Customer>;
      
     )
 
-    this.Handle();
+    
 
    
 

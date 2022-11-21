@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,Validators, ValidationErrors } from '@angular/forms';
+import {FormBuilder,Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { CustomerService } from '../services/customer.service';
 
@@ -11,17 +11,19 @@ import { CustomerService } from '../services/customer.service';
 export class NewCustomerComponent implements OnInit {
   CustomeformGroup! :FormGroup;
   constructor(private fb:FormBuilder,private customerservice:CustomerService) { }
-
+    
   ngOnInit(): void {
     this.CustomeformGroup=this.fb.group(
       {
         id:this.fb.control(null,),
-        name: this.fb.control(null,[Validators.required,Validators.minLength(5)]),
-        email:this.fb.control(null,[Validators.email,Validators.required])
+        name: this.fb.control('',[Validators.required,Validators.minLength(5)]),
+        email:this.fb.control('',[Validators.email,Validators.required])
       }
     )
-
+     
+      
   }
+ 
 
   HandleSaveCustomer(){
 

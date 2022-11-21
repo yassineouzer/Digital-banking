@@ -1,9 +1,14 @@
 {
   "customers": [
     {
-      "id": 6,
+      "id": 8,
       "name": "yassine",
       "email": "yassine@gmail.com"
+    },
+    {
+      "id": 9,
+      "name": "hamza",
+      "email": "hamza@gmail.com"
     }
   ]
 }
